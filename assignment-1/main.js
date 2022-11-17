@@ -16,15 +16,8 @@ function fibs(n) {
 
 // Recursive Fibs
 // IN > OUT : Number > Array-of-Numbers
-function fibsRec(n) {
-    // end case
-    if ((n == 1) || (n == 0)) {
-        return n;
-    }
-    else {
-        return fibsRec(n-1) + fibsRec(n-2);
-    }
-}
+let fibsRec = n => (n<2) ? n : (fibsRec(n-1) + fibsRec(n-2));
+
 
 
 console.log(fibsRec(0));
