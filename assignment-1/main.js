@@ -1,7 +1,8 @@
+// Iteratitive Fibs
 // IN > OUT : Number > Array-of-Numbers
 function fibs(n) {
     let arr = [0];
-    for(i = 1; i <= n - 1; i++) {
+    for(i = 1; i <= n; i++) {
         if( (arr.length == 1)) {
             arr.push(i);
         } else {
@@ -12,7 +13,22 @@ function fibs(n) {
 
     return arr;
 }
-console.log(fibs(0));
-console.log(fibs(1));
-console.log(fibs(6));
-console.log(fibs(8));
+
+// Recursive Fibs
+// IN > OUT : Number > Array-of-Numbers
+function fibsRec(n) {
+    // end case
+    if ((n == 1) || (n == 0)) {
+        return n;
+    }
+    else {
+        return fibsRec(n-1) + fibsRec(n-2);
+    }
+}
+
+
+console.log(fibsRec(0));
+console.log(fibsRec(1));
+console.log(fibsRec(3));
+console.log(fibsRec(6));
+console.log(fibsRec(8));
